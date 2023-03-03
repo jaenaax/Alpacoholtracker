@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="de.hdmstuttgart.myapplication.ui.home.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_homeFragment_to_chooseDrinkFragment"
+            app:destination="@id/chooseDrinkFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_drinksDrunkOverviewFragment"
+            app:destination="@id/drinksDrunkOverviewFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/chooseDrinkFragment"
+        android:name="de.hdmstuttgart.myapplication.ui.chooseDrink.ChooseDrinkFragment"
+        android:label="@string/title_chooseDrink"
+        tools:layout="@layout/fragment_choose_drink" >
+        <action
+            android:id="@+id/action_chooseDrinkFragment_to_homeFragment"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_chooseDrinkFragment_to_drinkOverviewFragment"
+            app:destination="@id/drinkOverviewFragment" />
+        <action
+            android:id="@+id/action_chooseDrinkFragment_to_createNewDrinkFragment"
+            app:destination="@id/createNewDrinkFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/drinkOverviewFragment"
+        android:name="de.hdmstuttgart.myapplication.ui.drinkOverview.DrinkOverviewFragment"
+        android:label="DrinkOverviewFragment"
+        tools:layout="@layout/fragment_drink_overview">
+        <action
+            android:id="@+id/action_drinkOverviewFragment_to_chooseDrinkFragment"
+            app:destination="@id/chooseDrinkFragment" />
+        <action
+            android:id="@+id/action_drinkOverviewFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="de.hdmstuttgart.myapplication.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewDrinkFragment"
+        android:name="de.hdmstuttgart.myapplication.ui.createNewDrink.CreateNewDrinkFragment"
+        android:label="CreateNewDrinkFragment"
+        tools:layout="@layout/fragment_create_new_drink">
+        <action
+            android:id="@+id/action_createNewDrinkFragment_to_chooseDrinkFragment"
+            app:destination="@id/chooseDrinkFragment" />
+        <action
+            android:id="@+id/action_createNewDrinkFragment_to_newCameraFragment"
+            app:destination="@id/CameraFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="de.hdmstuttgart.myapplication.ui.Camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_CameraFragment_to_createNewDrinkFragment"
+            app:destination="@id/createNewDrinkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinksDrunkOverviewFragment"
+        android:name="de.hdmstuttgart.myapplication.ui.drinksconsumedOverview.DrinksConsumedOverviewFragment"
+        android:label="DrinksDrunkOverviewFragment"
+        tools:layout="@layout/fragment_drinksconsumed_overview">
+        <action
+            android:id="@+id/action_drinksDrunkOverviewFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+</navigation>

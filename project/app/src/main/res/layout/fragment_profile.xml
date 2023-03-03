@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOnPrimary"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp">
+
+    <TextView
+        android:id="@+id/tvWeightDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="300dp"
+        android:text="Weight:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/tvWeightDescription"
+        app:layout_constraintStart_toEndOf="@id/tvWeightDescription"
+        app:layout_constraintTop_toTopOf="@+id/tvWeightDescription" />
+
+    <TextView
+        android:id="@+id/tvAmountUnitDrinkOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="kg"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/inputWeight"
+        app:layout_constraintStart_toEndOf="@id/inputWeight"
+        app:layout_constraintTop_toTopOf="@id/inputWeight" />
+
+    <TextView
+        android:id="@+id/tvGenderDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Gender:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@id/tvWeightDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvWeightDescription" />
+
+    <RadioGroup
+        android:id="@+id/inputGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/tvGenderDescription"
+        app:layout_constraintStart_toEndOf="@id/tvGenderDescription"
+        app:layout_constraintTop_toTopOf="@id/tvGenderDescription">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/colorPrimary" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="@color/colorPrimary" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSubmitProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/colorPrimaryContainer"
+        android:text="Submit"
+        android:textColor="@color/colorOnPrimaryContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/colorPrimaryContainer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImageDrink"
+            android:layout_width="96dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvDescripionNameOfDrink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescripionNameOfDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivImageDrink" />
+
+        <TextView
+            android:id="@+id/tvNameOfDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toBottomOf="@id/tvDescripionNameOfDrink"
+            app:layout_constraintStart_toStartOf="@id/tvAmount"
+            app:layout_constraintTop_toTopOf="@id/tvDescripionNameOfDrink"
+            tools:text="Beer" />
+
+        <TextView
+            android:id="@+id/tvDescriptionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="amount:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toTopOf="@id/tvDescriptionVolume"
+            app:layout_constraintStart_toStartOf="@id/tvDescripionNameOfDrink"
+            app:layout_constraintTop_toBottomOf="@id/tvDescripionNameOfDrink" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toBottomOf="@id/tvDescriptionAmount"
+            app:layout_constraintStart_toEndOf="@id/tvDescriptionAmount"
+            app:layout_constraintTop_toTopOf="@id/tvDescriptionAmount"
+            tools:text="500 ml" />
+
+        <TextView
+            android:id="@+id/tvDescriptionVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="volume:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toTopOf="@id/tvDescriptionImpact"
+            app:layout_constraintStart_toStartOf="@id/tvDescripionNameOfDrink"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionAmount" />
+
+        <TextView
+            android:id="@+id/tvVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toBottomOf="@id/tvDescriptionVolume"
+            app:layout_constraintStart_toStartOf="@id/tvAmount"
+            app:layout_constraintTop_toTopOf="@id/tvDescriptionVolume"
+            tools:text="5.0 %" />
+
+        <TextView
+            android:id="@+id/tvDescriptionImpact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="impact:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toBottomOf="@id/ivImageDrink"
+            app:layout_constraintStart_toStartOf="@id/tvDescripionNameOfDrink" />
+
+        <TextView
+            android:id="@+id/tvImpact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorOnPrimaryContainer"
+            app:layout_constraintBottom_toBottomOf="@id/tvDescriptionImpact"
+            app:layout_constraintStart_toStartOf="@+id/tvAmount"
+            app:layout_constraintTop_toTopOf="@id/tvDescriptionImpact"
+            tools:text="1,4 ‰" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

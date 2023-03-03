@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOnPrimary"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp">
+
+    <ImageView
+        android:id="@+id/imageDrinkOverview"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Beer"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageDrinkOverview" />
+
+
+    <TextView
+        android:id="@+id/tvAmountDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40sp"
+        android:layout_marginTop="140dp"
+        android:text="Amount:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageDrinkOverview" />
+
+    <EditText
+        android:id="@+id/inputAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:inputType="number"
+        android:minWidth="48dp"
+        android:text="9999"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvAmountDescription"
+        app:layout_constraintStart_toEndOf="@id/tvAmountDescription"
+        app:layout_constraintTop_toTopOf="@+id/tvAmountDescription" />
+
+    <TextView
+        android:id="@+id/tvAmountUnitDrinkOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40sp"
+        android:text="ml"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/inputAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputAmount" />
+
+    <TextView
+        android:id="@+id/tvVolumeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40sp"
+        android:layout_marginTop="50dp"
+        android:text="Volume:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmountDescription" />
+
+    <EditText
+        android:id="@+id/inputVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minWidth="48dp"
+        android:text="99.99"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvVolumeDescription"
+        app:layout_constraintStart_toStartOf="@id/inputAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvVolumeDescription" />
+
+    <TextView
+        android:id="@+id/textVolumeUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/inputVolume"
+        app:layout_constraintStart_toStartOf="@id/tvAmountUnitDrinkOverview"
+        app:layout_constraintTop_toTopOf="@+id/inputVolume" />
+
+    <Button
+        android:id="@+id/btnSubmitDrinkOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryContainer"
+        android:text="submit"
+        android:textColor="@color/colorOnPrimaryContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputVolume" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/createNewDrinkFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOnPrimary"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp">
+
+    <TextView
+        android:id="@+id/tvNameOwnDrinkDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60sp"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117"/>
+
+    <EditText
+        android:id="@+id/inputNameOwnDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameOwnDrinkDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNameOwnDrinkDescription"
+        app:layout_constraintTop_toTopOf="@id/tvNameOwnDrinkDescription" />
+
+    <ImageView
+        android:id="@+id/ivImageOwnDrink"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNameOwnDrink" />
+
+    <Button
+        android:id="@+id/btnAddImageFromGallery"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/colorPrimaryContainer"
+        android:text="load from gallery"
+        android:textColor="@color/colorOnPrimaryContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImageOwnDrink" />
+
+    <TextView
+        android:id="@+id/tvAmountOwnDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:text="Amount"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/tvNameOwnDrinkDescription"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenCamera" />
+
+    <EditText
+        android:id="@+id/inputAmountOwnDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/tvAmountOwnDrink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAmountOwnDrink" />
+
+    <TextView
+        android:id="@+id/tvAmountUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:text="ml"
+        app:layout_constraintBottom_toBottomOf="@+id/inputAmountOwnDrink"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddImageFromGallery"
+        app:layout_constraintTop_toTopOf="@+id/inputAmountOwnDrink" />
+
+    <TextView
+        android:id="@+id/tvVolumeOwnDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:text="Volume"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/tvAmountOwnDrink"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountOwnDrink" />
+
+    <EditText
+        android:id="@+id/inputVolumeOwnDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/tvVolumeOwnDrink"
+        app:layout_constraintStart_toStartOf="@id/inputAmountOwnDrink"
+        app:layout_constraintTop_toTopOf="@+id/tvVolumeOwnDrink" />
+
+    <TextView
+        android:id="@+id/tvVolumeUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        app:layout_constraintBottom_toBottomOf="@+id/inputVolumeOwnDrink"
+        app:layout_constraintStart_toStartOf="@+id/tvAmountUnit"
+        app:layout_constraintTop_toTopOf="@+id/inputVolumeOwnDrink" />
+
+    <Button
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="@color/colorPrimaryContainer"
+        android:text="open camera"
+        android:textColor="@color/colorOnPrimaryContainer"
+        app:layout_constraintEnd_toEndOf="@id/btnAddImageFromGallery"
+        app:layout_constraintStart_toStartOf="@id/btnAddImageFromGallery"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddImageFromGallery" />
+
+    <Button
+        android:id="@+id/btnConfirmNewDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryContainer"
+        android:text="Comfirm"
+        android:textColor="@color/colorOnPrimaryContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputVolumeOwnDrink" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Alpacohol</string>
+    <string name="title_chooseDrink">ChooseDrink</string>
+    <string name="choose_your_drink">Choose your drink!</string>
+    <string name="enter_name_of_drink">enter name of drink</string>
+    <string name="name">Name</string>
+    <string name="take_photo">take photo</string>
+    <string name="profile">Profile</string>
+    <string name="createnewdrink">+</string>
+    <string name="createnewdrinkbtn">createnewdrinkbtn</string>
+    <string name="create_new_drink">create new drink</string>
+    <string name="capture">capture</string>
+    <string name="preview_area">preview_area</string>
+    <string name="plus">+</string>
+    <string name="drinks_you_have_drunk">Drinks You Have Drunk</string>
+    <string name="delete_all">Delete all</string>
+    <string name="drinks_drunk">Drinks drunk</string>
+    <string name="drinks_consumed">Drinks consumed</string>
+    <string name="show_drinks_consumed">show drinks consumed</string>
+</resources>
